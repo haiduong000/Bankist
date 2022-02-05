@@ -93,8 +93,6 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 });
 
-// Tabbed component
-
 // Using event delegation
 tabsContainer.addEventListener('click', function (e) {
   // lựa chọn thằng cha gần nhất
@@ -127,7 +125,7 @@ const handleHover = function (e) {
         el.style.opacity = this;
       }
     });
-    logo.style.opacity = this;
+      logo.style.opacity = this;
   }
 };
 // Passing 'argument' into handler
@@ -234,7 +232,7 @@ const sliderss = function () {
   // functions
   const createDots = function () {
     sliders.forEach(function (_, i) {
-      dotContainer.insertAdjacentHTML(
+      dotContainer.insertAdjacentHTML( // create HTML element 
         'beforeend',
         `<button class='dots__dot' data-slide="${i}"></button>`
       );
@@ -293,7 +291,7 @@ const sliderss = function () {
     }
     e.key === 'ArrowRight' && nextSlide();
   });
-
+  // dots functionality
   dotContainer.addEventListener('click', function (e) {
     if (e.target.classList.contains('dots__dot')) {
       const { slide } = e.target.dataset;
