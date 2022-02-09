@@ -51,35 +51,10 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth
   );
-  // // Scrolling
-  // window.scrollTo(
-  //   // vị trị hiện tại + với vị trí mà ta scroll
-  //   s1coords.left + window.pageXOffset,
-  //   s1coords.top + window.pageYOffset
-  // );
-  // old school way
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: "smooth",
-  // })
-  // modern way
   section1.scrollIntoView({ behavior: 'smooth' });
 });
 
 // Page navigation
-
-//  Cách 1
-// document.querySelectorAll('.nav__link').forEach(function(el) {
-//   el.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     console.log(id);
-//     document.querySelector(id).scrollIntoView({behavior: 'smooth'});
-//   })
-// })
-
-// Cách 2: NÊN DÙNG
 // event delegation
 // 1. Add event listener to common parent element
 // 2. Xác định nguồn gốc của event
